@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯指南 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Inter", "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #f2f4f6;
+            color: #1e2a34;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(145deg, #ffffff 0%, #f7f9fb 100%);
+            border: 1px solid #e2e7ed;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px -8px rgba(0, 20, 30, 0.08);
+            padding: 3rem 2.5rem 2.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #1a5c8a, #3b8fc2, #1a5c8a);
+            opacity: 0.5;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0f2b3d;
+            margin-bottom: 0.5rem;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #4a5b6a;
+            border-bottom: 1px dashed #cdd6df;
+            padding-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #2f4050;
+        }
+
+        /* 卡片区域 */
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5eaef;
+            border-radius: 24px;
+            box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.04);
+            padding: 2rem 2.2rem;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 24px -8px rgba(20, 50, 70, 0.12);
+        }
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-left: 5px solid #2b7a9e;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            color: #14303f;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #1d4a62;
+            margin: 1.2rem 0 0.6rem;
+        }
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #2b3d4b;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        .inset-link {
+            background: #f0f5fa;
+            border-radius: 14px;
+            padding: 0.8rem 1.2rem;
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+            border: 1px solid #dfe7ef;
+        }
+        .inset-link a {
+            color: #1a6b96;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dotted #8bafc9;
+        }
+        .inset-link a:hover {
+            color: #0b3e5c;
+            border-bottom: 1px solid #0b3e5c;
+        }
+
+        /* faq 摘要 */
+        .faq-mini {
+            margin-top: 1.4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+        }
+        .faq-mini span {
+            background: #eef3f7;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #1f4a5e;
+            border: 1px solid #d7e1ea;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding: 1.5rem 2rem;
+            background: #ffffffcc;
+            backdrop-filter: blur(2px);
+            border: 1px solid #dee5ec;
+            border-radius: 28px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #3b5568;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .footer-note a {
+            color: #1a6b96;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body { padding: 1.2rem 0.8rem; }
+            .hero { padding: 2rem 1.2rem; }
+            .hero h1 { font-size: 2rem; }
+            .card { padding: 1.5rem 1.2rem; }
+            .card h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 横幅 -->
+    <div class="hero">
+        <h1>⚽ 世界杯 · 专题</h1>
+        <div class="sub">FIFA World Cup 综合指南</div>
+        <p>从赛程结构、历史冷门到观赛文化，帮助你快速了解国际足联世界杯的核心面貌。</p>
+    </div>
+
+    <!-- 三段自然介绍 + 差异化卡片 -->
+    <div class="grid">
+
+        <!-- 第一段：背景说明 + 网站用途 -->
+        <div class="card">
+            <h2>为什么需要这个网站？</h2>
+            <p>在信息爆炸的赛期，球迷常常迷失在零散新闻与赛程表之间。<strong>wc-go-fifa.com</strong> 聚合了历届小组赛数据、晋级路线图与球队基础档案，为关注<a href="https://wc-go-fifa.com">世界杯</a>的用户提供一份结构化的参考资料。无论你是寻找特定年份的淘汰赛对阵，还是想对比各洲参赛名额变迁，这里的分类索引都能节省大量检索时间。</p>
+            <p>网站设计初衷并非替代官方渠道，而是以「知识整理」为出发点，把散落在不同页面上的关键节点串联起来，形成一张可追溯的信息网络。</p>
+        </div>
+
+        <!-- 第二段：特点 + 场景切入 -->
+        <div class="card">
+            <h2>信息组织方式</h2>
+            <p>整个站点的内容围绕三个轴向展开：<strong>时间轴</strong>（从1930到2026年）、<strong>赛区分布</strong>（各大洲预选赛特征）、以及<strong>经典比赛</strong>（包括比分、场地与背景）。每一条记录都标注了数据来源，方便进一步核实。</p>
+            <p>例如，当你查阅某届<a href="https://wc-go-fifa.com">世界杯</a>小组积分时，同一页面还会显示该届的场均进球、观众人数以及黑马球队的异动轨迹——这种并置视角常常带来新的理解。对于深度球迷，网站还整理了裁判选派与争议判罚的汇总，这在同类站点中较为少见。</p>
+            <div class="inset-link">
+                📌 典型使用场景：赛前快速浏览对手历史交锋，赛后复盘战术演变。
+            </div>
+        </div>
+
+        <!-- 第三段：FAQ 摘要 + 页内提示 -->
+        <div class="card">
+            <h2>常见疑问 · 摘要</h2>
+            <p>很多用户第一次打开站点时会问：「这里的数据和 FIFA 官网有什么区别？」 简单来说，本站侧重于横向比较与历史关联——比如同一位教练在不同届<span style="border-bottom: 1px dotted #8baec6;">世界杯</span>中的胜率变化，或是同一城市多次承办时的观众偏好差异。这些维度官方通常不会直接展示。</p>
+            <p>另一个高频问题是内容版权。本站所有公开数据均来自国际足联官方报告及各国足协公开档案，并附引用链接。如果你发现某条记录需要修正，可以通过页面底部的反馈渠道提交。</p>
+            <div class="faq-mini">
+                <span>📅 1930-2026 完整赛历</span>
+                <span>🏆 冠亚军汇总</span>
+                <span>🌍 预选赛名额变迁</span>
+                <span>📊 场均进球趋势</span>
+                <span>⚡ 经典加时赛记录</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <p>本站持续更新历届<a href="https://wc-go-fifa.com">世界杯</a>数据与解读，适合赛前研究、赛后回顾以及横向比较。内容保持克制与客观，不包含实时赌盘或诱导性信息。</p>
+        <p style="margin-top: 0.6rem; font-size: 0.85rem; color: #56748c;">—— 以杂志式的章节组织，帮你建立自己的世界杯知识框架 ——</p>
+    </div>
+</div>
+</body>
+</html>
